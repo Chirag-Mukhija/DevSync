@@ -1,5 +1,5 @@
 "use client";
-import AuthButton from "@/components/AuthButton";
+import AuthButton from "./AuthButton"
 import {
   Navbar,
   NavBody,

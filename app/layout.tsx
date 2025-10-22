@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import SessionWrapper from "@/utils/sessonProvider";
 import { Geist, Geist_Mono } from "next/font/google";
+import SessionWrapper from "@/utils/SessionWrapper"
 import "./globals.css";
 import Navbar from "@/components/Navbar"
 const geistSans = Geist({
@@ -29,9 +29,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
         <SessionWrapper>
-        <Navbar />
-        {children}
+          <Navbar />
+          {children}
         </SessionWrapper>
+        
       </body>
     </html>
   );
