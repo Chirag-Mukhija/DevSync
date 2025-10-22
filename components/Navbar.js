@@ -1,4 +1,5 @@
 "use client";
+import AuthButton from "@/components/AuthButton";
 import {
   Navbar,
   NavBody,
@@ -38,7 +39,7 @@ export default function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary">Login</NavbarButton>
+            <NavbarButton variant="secondary"><AuthButton /></NavbarButton>
           </div>
         </NavBody>
  
@@ -72,14 +73,7 @@ export default function NavbarDemo() {
                 variant="primary"
                 className="w-full"
               >
-                Login
-              </NavbarButton>
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Book a call
+                <AuthButton />
               </NavbarButton>
             </div>
           </MobileNavMenu>
